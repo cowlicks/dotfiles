@@ -1,23 +1,18 @@
 servers = (
-  { 
+  {
     address = "irc.freenode.net";
-    chatnet = "Freenode"; 
+    chatnet = "Freenode";
     port = "6666";
     autoconnect = "Yes";
-  },
+  }
 );
 
-chatnets = {
-    Freenode = {
-    type = "IRC";
-    nick = "cowlicks";
-    }
-};
+chatnets = { Freenode = { type = "IRC"; }; };
 
 channels = (
   { name = "#irssi"; chatnet = "ircnet"; autojoin = "No"; },
-  { name = "##elite"; chatnet = "Freenode"; autojoin = "Yes"; }
-  { name = "#physics"; chatnet = "Freenode"; autojoin = "Yes"; }
+  { name = "##elite"; chatnet = "Freenode"; autojoin = "Yes"; },
+  { name = "#physics"; chatnet = "Freenode"; autojoin = "Yes"; },
   { name = "#math"; chatnet = "Freenode"; autojoin = "Yes"; }
 );
 
