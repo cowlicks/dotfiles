@@ -109,5 +109,5 @@ source /usr/local/bin/virtualenvwrapper.sh
 
 # For heroku dev.
 export LOCAL_DEV=true
-
+alias rm=trash
 
