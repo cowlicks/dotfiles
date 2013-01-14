@@ -107,3 +107,4 @@ filetype plugin on
 let g:tex_flavor='latex'
 
 set tabstop=4 shiftwidth=4 expandtab
+set softtabstop=4
