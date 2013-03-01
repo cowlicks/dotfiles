@@ -108,3 +108,9 @@ let g:tex_flavor='latex'
 
 set tabstop=4 shiftwidth=4 expandtab
 set softtabstop=4
+
+" Remove ability to use arrow key. Habit breaking, habit making.
+noremap <Up> <NOP>
+noremap <Down> <NOP>
+noremap <Left> <NOP>
+noremap <Right> <NOP>
