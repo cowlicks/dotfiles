@@ -1,4 +1,6 @@
 dotfiles
 ========
 
-My dotfiles, nothing special.
+My dotfiles, vim, bashrc, tmux, global_gitignore, etc.
+
+Nothing special.
