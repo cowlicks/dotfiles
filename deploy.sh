@@ -6,7 +6,7 @@
 # Set home dir and old_dotfiles dir.
 dir=~/dotfiles
 olddir=~/dotfiles_old
-files="bashrc irssi tmux.conf vimrc"
+files="bashrc irssi tmux.conf vim vimrc global_gitignore"
 
 # mv existing dotfiles to old_dotfiles
 echo "Creating $olddir for backup of any existing dotfiles in ~"
