@@ -113,3 +113,8 @@ alias rm=trash-put
 
 # Add global gitignore directory 
 git config --global core.excludesfile ~/.global_gitignore
+
+# If ipython is installed, alias python to ipython
+if type "ipython" > /dev/null; then
+    alias python='ipython';
+fi
