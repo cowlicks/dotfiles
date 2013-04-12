@@ -109,7 +109,9 @@ source /usr/local/bin/virtualenvwrapper.sh
 
 # For heroku dev.
 export LOCAL_DEV=true
-alias rm=trash-put
+if type "trash-put" > /dev/null; then
+    alias rm='trash-put';
+fi
 
 # Add global gitignore directory 
 git config --global core.excludesfile ~/.global_gitignore
