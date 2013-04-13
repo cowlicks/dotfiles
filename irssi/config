@@ -1,19 +1,20 @@
 servers = (
   {
-    address = "irc.freenode.net";
-    chatnet = "Freenode";
-    port = "6666";
-    autoconnect = "Yes";
+    address = "p4fsi4ockecnea7l.onion";
+    chatnet = "freenode";
+    port = "6667";
+    use_ssl = "no";
+    ssl_verify = "no";
   }
 );
 
-chatnets = { Freenode = { type = "IRC"; }; };
+chatnets = { freenode = { type = "IRC"; }; };
 
 channels = (
   { name = "#irssi"; chatnet = "ircnet"; autojoin = "No"; },
-  { name = "##elite"; chatnet = "Freenode"; autojoin = "Yes"; },
-  { name = "#physics"; chatnet = "Freenode"; autojoin = "Yes"; },
-  { name = "#math"; chatnet = "Freenode"; autojoin = "Yes"; }
+  { name = "##elite"; chatnet = "freenode"; autojoin = "Yes"; },
+  { name = "#physics"; chatnet = "freenode"; autojoin = "Yes"; },
+  { name = "#math"; chatnet = "freenode"; autojoin = "Yes"; }
 );
 
 aliases = {
@@ -179,5 +180,5 @@ statusbar = {
 };
 settings = {
   "fe-text" = { actlist_sort = "refnum"; };
-  core = { real_name = "blake"; user_name = "blake"; nick = "blake"; };
+  core = { real_name = "blake"; user_name = "blake"; nick = "cowlicks"; };
 };
