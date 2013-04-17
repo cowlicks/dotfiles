@@ -1,14 +1,22 @@
 servers = (
   {
-    address = "p4fsi4ockecnea7l.onion";
+    address = "irc.freenode.net";
     chatnet = "freenode";
+    port = "6667";
+    use_ssl = "no";
+    ssl_verify = "no";
+    autoconnect = "yes";
+  },
+  {
+    address = "irc.oft.net";
+    chatnet = "oftc";
     port = "6667";
     use_ssl = "no";
     ssl_verify = "no";
   }
 );
 
-chatnets = { freenode = { type = "IRC"; }; };
+chatnets = { freenode = { type = "IRC"; }; oftc = { type = "IRC"; }; };
 
 channels = (
   { name = "#irssi"; chatnet = "ircnet"; autojoin = "No"; },
