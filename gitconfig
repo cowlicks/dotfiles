@@ -10,6 +10,7 @@
 
 [core]
     editor = vim
+	excludesfile = /home/blake/.global_gitignore
 
 [merge]
     summary = true
