@@ -109,6 +109,8 @@ source /usr/local/bin/virtualenvwrapper.sh
 
 # For heroku dev.
 export LOCAL_DEV=true
+
+# Safe rm.
 if type "trash-put" > /dev/null; then
     alias rm='trash-put';
 fi
@@ -116,7 +118,12 @@ fi
 # Add global gitignore directory 
 git config --global core.excludesfile ~/.global_gitignore
 
+## This caused too many problems with things like virtualenv and 
+## passing commandline args
 # If ipython is installed, alias python to ipython
-if type "ipython" > /dev/null; then
-    alias python='ipython';
-fi
+#if type "ipython" > /dev/null; then
+#    alias python='ipython';
+#fi
+
+# Newer version have a download cache. Flippin sweet.
+export PIP_DOWNLOAD_CACHE=$HOME/.pip_download_cache
