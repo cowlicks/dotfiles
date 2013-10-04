@@ -1,3 +1,8 @@
+" Pathogen vim package manager
+execute pathogen#infect()
+syntax on
+filetype plugin indent on
+
 " When started as "evim", evim.vim will already have done these settings.
 if v:progname =~? "evim"
   finish
@@ -33,13 +38,6 @@ inoremap <C-U> <C-G>u<C-U>
 " In many terminal emulators the mouse works just fine, thus enable it.
 if has('mouse')
   set mouse=a
-endif
-
-" Switch syntax highlighting on, when the terminal has colors
-" Also switch on highlighting the last used search pattern.
-if &t_Co > 2 || has("gui_running")
-  syntax on
-  set hlsearch
 endif
 
 " Only do this part when compiled with support for autocommands.
@@ -109,3 +107,6 @@ set grepprg=grep\ -nH\ $*
 
 " Vim 7 loads empty .tex files as 'plaintex' instead of 'tex'. Fix this.
 let g:tex_flavor='latex'
+
+" Highlight searched terms
+set hlsearch
