@@ -1,15 +1,3 @@
-
-" An example for a vimrc file.
-"
-" Maintainer:	Bram Moolenaar <Bram@vim.org>
-" Last change:	2008 Dec 17
-"
-" To use it, copy it to
-"     for Unix and OS/2:  ~/.vimrc
-"	      for Amiga:  s:.vimrc
-"  for MS-DOS and Win32:  $VIM\_vimrc
-"	    for OpenVMS:  sys$login:.vimrc
-
 " When started as "evim", evim.vim will already have done these settings.
 if v:progname =~? "evim"
   finish
@@ -114,3 +102,10 @@ noremap <Up> <NOP>
 noremap <Down> <NOP>
 noremap <Left> <NOP>
 noremap <Right> <NOP>
+
+" Latex-Suite stuff
+" fix grep latex-suite incompatibilities
+set grepprg=grep\ -nH\ $*
+
+" Vim 7 loads empty .tex files as 'plaintex' instead of 'tex'. Fix this.
+let g:tex_flavor='latex'
