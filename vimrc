@@ -111,5 +111,6 @@ let g:tex_flavor='latex'
 " Highlight searched terms
 set hlsearch
 
-" STOP
+" STOP. LaTeX stuff.
 autocmd FileType tex set colorcolumn=72
+autocmd FileType tex set tw=72
