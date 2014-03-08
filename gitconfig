@@ -14,3 +14,5 @@
 
 [merge]
     summary = true
+[push]
+	default = simple
