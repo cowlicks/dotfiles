@@ -4,7 +4,7 @@
 # TODO
 
 # Set home dir and old_dotfiles dir.
-dir=~/dotfiles
+dir=~/.dotfiles
 olddir=~/dotfiles_old
 files="bashrc irssi tmux.conf vim vimrc global_gitignore gitconfig"
 
