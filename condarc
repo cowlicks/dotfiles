@@ -1,0 +1,10 @@
+create_default_packages:
+    - python
+    - ipython
+    - pip
+    - nose
+    - flake8
+
+channels:
+  - numba
+  - defaults
