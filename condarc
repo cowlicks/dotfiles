@@ -4,6 +4,7 @@ create_default_packages:
     - pip
     - nose
     - flake8
+    - pytest
 
 channels:
   - numba
