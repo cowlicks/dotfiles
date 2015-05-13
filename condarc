@@ -1,5 +1,4 @@
 create_default_packages:
-    - python
     - ipython
     - pip
     - nose
@@ -9,3 +8,5 @@ create_default_packages:
 channels:
   - numba
   - defaults
+
+binstar_upload: no
