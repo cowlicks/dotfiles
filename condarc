@@ -9,4 +9,4 @@ channels:
   - numba
   - defaults
 
-binstar_upload: no
+binstar_upload: yes
