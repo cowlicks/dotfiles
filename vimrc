@@ -114,3 +114,9 @@ set hlsearch
 " STOP. LaTeX stuff.
 autocmd FileType tex set colorcolumn=72
 autocmd FileType tex set tw=72
+
+" python stuff
+autocmd FileType python set colorcolumn=80
+
+" put cursor on first line of git commit in vim
+autocmd FileType gitcommit call setpos('.', [0, 1, 1, 0])
