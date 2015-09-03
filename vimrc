@@ -120,3 +120,16 @@ autocmd FileType python set colorcolumn=80
 
 " put cursor on first line of git commit in vim
 autocmd FileType gitcommit call setpos('.', [0, 1, 1, 0])
+
+" use tab to switch buffers
+nnoremap <tab> :w \|:bnext <cr>
+
+" underline cursorline
+set cursorline
+hi CursorLine ctermbg=Black cterm=None
+
+" use ,n to change tabs
+nnoremap ,n :w \|:tabNext <cr>
+
+" leader q to close buffer but not the window
+nnoremap <leader>q :bp<bar>sp<bar>bn<bar>bd<CR>
