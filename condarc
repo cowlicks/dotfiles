@@ -6,7 +6,6 @@ create_default_packages:
     - pytest
 
 channels:
-  - numba
   - defaults
 
 binstar_upload: yes
