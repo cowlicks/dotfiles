@@ -102,11 +102,6 @@ if [ -f /etc/bash_completion ] && ! shopt -oq posix; then
     . /etc/bash_completion
 fi
 
-# For virtualenv python dev
-export WORKON_HOME=$HOME/.virtualenvs
-export PROJECT_HOME=$HOME/~/
-source /usr/local/bin/virtualenvwrapper.sh
-
 # For heroku dev.
 export LOCAL_DEV=true
 
