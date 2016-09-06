@@ -77,7 +77,7 @@ export PATH="/usr/local/bin:/usr/bin:/bin:/usr/local/games:/usr/games"
 # For virtualenv python dev
 export WORKON_HOME=$HOME/.virtualenvs
 export PROJECT_HOME=$HOME/~/
-source /usr/local/bin/virtualenvwrapper.sh
+source /usr/bin/virtualenvwrapper.sh
 
 # ls aliases
 alias ll='ls -alF'
@@ -86,3 +86,6 @@ alias l='ls -CF'
 
 # anaconda install location
 export PATH=/home/blake/anaconda/bin:$PATH
+
+export VISUAL="vim"
+export GOPATH=$HOME/go
