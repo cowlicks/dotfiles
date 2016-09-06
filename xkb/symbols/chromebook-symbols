@@ -1,0 +1,35 @@
+partial alphanumeric_keys modifier_keys
+xkb_symbols "home-end" {
+    key <LEFT> {
+        type="ARROW",
+        repeat=yes,
+        [ Left, Left, Home, Left ],
+        actions[Group1] = [
+            NoAction(),
+            NoAction(),
+            RedirectKey(key=<HOME>, clearmods=Alt),
+            NoAction()
+        ]
+    };
+    key <RGHT> {
+        type="ARROW",
+        repeat=yes,
+        [ Right, Right, End, Right ],
+        actions[Group1] = [
+            NoAction(),
+            NoAction(),
+            RedirectKey(key=<END>, clearmods=Alt),
+            NoAction()
+        ]
+    };
+};
+
+partial alphanumeric_keys modifier_keys
+xkb_symbols "delete" {
+    key <BKSP> {
+        type="PC_CONTROL_LEVEL2",
+        repeat=yes,
+        symbols[Group1] = [ BackSpace, Delete],
+        actions[Group1] = [ NoAction(), RedirectKey(key=<DELE>, clearMods=Control)]
+    };
+};

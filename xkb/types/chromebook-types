@@ -1,0 +1,18 @@
+xkb_types "chromebook" {
+    virtual_modifiers LAlt;
+    type "ARROW" {
+        modifiers              = Shift+Lock+Alt+Control;
+        map[Shift]             = Level2;
+        map[Lock]              = Level2;
+        map[Alt]               = Level3;
+        map[Alt+Shift]         = Level3;
+        map[Alt+Lock]          = Level3;
+        map[Control+Alt]       = Level4;
+        map[Control+Alt+Shift] = Level4;
+        map[Control+Alt+Lock]  = Level4;
+        level_name[Level1]     = "Base";
+        level_name[Level2]     = "Caps";
+        level_name[Level3]     = "Alt";
+        level_name[Level4]     = "ControlAlt";
+    };
+};

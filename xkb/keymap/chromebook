@@ -1,0 +1,7 @@
+xkb_keymap {
+        xkb_keycodes  { include "evdev+aliases(qwerty)" };
+        xkb_types     { include "complete+chromebook-types"      };
+        xkb_compat    { include "complete"      };
+        xkb_symbols   { include "pc+us(dvp)+us:2+inet(evdev)+inet(chromebook)+chromebook-symbols(home-end)+chromebook-symbols(delete)" };
+        xkb_geometry  { include "pc(pc105)"     };
+};
