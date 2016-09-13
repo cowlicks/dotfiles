@@ -27,9 +27,9 @@ xkb_symbols "home-end" {
 partial alphanumeric_keys modifier_keys
 xkb_symbols "delete" {
     key <BKSP> {
-        type="PC_CONTROL_LEVEL2",
+        type="TWO_LEVEL",
         repeat=yes,
         symbols[Group1] = [ BackSpace, Delete],
-        actions[Group1] = [ NoAction(), RedirectKey(key=<DELE>, clearMods=Control)]
+        actions[Group1] = [ NoAction(), RedirectKey(key=<DELE>, clearMods=Shift)]
     };
 };
