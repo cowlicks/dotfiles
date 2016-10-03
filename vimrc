@@ -122,6 +122,9 @@ autocmd FileType python set colorcolumn=80
 autocmd Filetype javascript set tabstop=2 shiftwidth=2 expandtab
 autocmd Filetype javascript set softtabstop=2
 
+" go stuff
+autocmd Filetype go set tabstop=4 noexpandtab
+
 " put cursor on first line of git commit in vim
 autocmd FileType gitcommit call setpos('.', [0, 1, 1, 0])
 
