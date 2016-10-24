@@ -141,3 +141,9 @@ nnoremap ,n :w \|:tabNext <cr>
 
 " leader q to close buffer but not the window
 nnoremap <leader>q :bp<bar>sp<bar>bn<bar>bd<CR>
+
+" ,w to save
+map ,w :w <cr>
+
+" show line numbers
+set nu
