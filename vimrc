@@ -123,6 +123,10 @@ autocmd Filetype pyton nnoremap ,f :w \|:! clear && flake8 % <cr>
 autocmd Filetype javascript set tabstop=2 shiftwidth=2 expandtab
 autocmd Filetype javascript set softtabstop=2
 
+" .yaml stuff
+autocmd Filetype yaml set tabstop=2 shiftwidth=2 expandtab
+autocmd Filetype yaml set softtabstop=2
+
 " go stuff
 autocmd Filetype go set tabstop=4 noexpandtab
 
