@@ -100,3 +100,5 @@ if [ -f "${GCLOUD_INSTALL_DIR}/path.zsh.inc" ]; then . "${GCLOUD_INSTALL_DIR}/pa
 
 # The next line enables shell command completion for gcloud.
 if [ -f "${GCLOUD_INSTALL_DIR}/completion.zsh.inc" ]; then . "${GCLOUD_INSTALL_DIR}/completion.zsh.inc"; fi
+
+source ~/.keys
