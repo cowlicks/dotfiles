@@ -16,3 +16,5 @@
     summary = true
 [push]
 	default = simple
+[alias]
+	pac = "!f(){ git add --patch && git commit; }; f"
