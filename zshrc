@@ -89,3 +89,7 @@ export PATH=/home/blake/anaconda/bin:$PATH
 
 export VISUAL="vim"
 export GOPATH=$HOME/go
+
+# docker
+alias dcomp="docker-compose"
+alias dock="docker"
