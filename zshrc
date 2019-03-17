@@ -93,3 +93,10 @@ export GOPATH=$HOME/go
 # docker
 alias dcomp="docker-compose"
 alias dock="docker"
+
+# The next line updates PATH for the Google Cloud SDK.
+GCLOUD_INSTALL_DIR='/home/blake/.google-cloud-sdk'
+if [ -f "${GCLOUD_INSTALL_DIR}/path.zsh.inc" ]; then . "${GCLOUD_INSTALL_DIR}/path.zsh.inc"; fi
+
+# The next line enables shell command completion for gcloud.
+if [ -f "${GCLOUD_INSTALL_DIR}/completion.zsh.inc" ]; then . "${GCLOUD_INSTALL_DIR}/completion.zsh.inc"; fi
