@@ -117,7 +117,7 @@ autocmd FileType tex set tw=72
 
 " python stuff
 autocmd FileType python set colorcolumn=80
-autocmd Filetype pyton nnoremap ,f :w \|:! clear && flake8 % <cr>
+autocmd Filetype python nnoremap ,l :w \|:! clear && flake8 % <cr>
 
 " javascript stuff
 autocmd Filetype javascript set tabstop=2 shiftwidth=2 expandtab
