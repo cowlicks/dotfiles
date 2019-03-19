@@ -151,3 +151,5 @@ map ,w :w <cr>
 
 " show line numbers
 set nu
+
+colorscheme gruvbox
