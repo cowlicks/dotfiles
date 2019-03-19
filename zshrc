@@ -104,4 +104,7 @@ if [ -f "${GCLOUD_INSTALL_DIR}/completion.zsh.inc" ]; then . "${GCLOUD_INSTALL_D
 alias vim="nvim"
 alias vi="nvim"
 
+# for gemfury cli tool
+export PATH=/home/blake/.gem/ruby/2.6.0/bin:$PATH
+
 source ~/.private
