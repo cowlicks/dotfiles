@@ -153,3 +153,7 @@ map ,w :w <cr>
 set nu
 
 colorscheme gruvbox
+
+function! SingleSpace()
+    %s/\n\n/\r/g
+endfunction
