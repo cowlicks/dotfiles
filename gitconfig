@@ -18,3 +18,4 @@
 	default = simple
 [alias]
 	pac = "!f(){ git add --patch && git commit; }; f"
+	freebase = "!f(){ git fetch origin && git rebase origin/master; }; f"
