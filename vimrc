@@ -152,6 +152,12 @@ map ,w :w <cr>
 " show line numbers
 set nu
 
+" unlimited undo4eva
+set undodir=~/.vim/undodir
+set undofile
+
+set history=10000
+
 colorscheme gruvbox
 
 function! SingleSpace()
