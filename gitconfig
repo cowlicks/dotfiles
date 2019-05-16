@@ -17,5 +17,5 @@
 [push]
 	default = simple
 [alias]
-	pac = "!f(){ git add --patch && git commit; }; f"
+	pac = "!f(){ git add --patch \"${GIT_PREFIX}./$1\" && git commit; }; f"
 	freebase = "!f(){ git fetch origin && git rebase origin/master; }; f"
