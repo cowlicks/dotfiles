@@ -11,6 +11,7 @@
 [core]
     editor = vim
 	excludesfile = /home/blake/.global_gitignore
+	hooksPath = /home/blake/git/dotfiles/git_hooks
 
 [merge]
     summary = true
