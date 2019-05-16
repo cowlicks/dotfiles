@@ -160,6 +160,9 @@ set history=10000
 
 colorscheme gruvbox
 
+" for typescript suff
+autocmd FileType typescript TsuReload
+
 function! SingleSpace()
     %s/\n\n/\r/g
 endfunction
