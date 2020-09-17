@@ -126,6 +126,10 @@ autocmd Filetype python nnoremap ,l :w \|:! clear && flake8 % <cr>
 " javascript stuff
 autocmd Filetype javascript set tabstop=2 shiftwidth=2 expandtab
 autocmd Filetype javascript set softtabstop=2
+autocmd Filetype javascript nnoremap ,l :w \|:! clear && eslint % <cr>
+
+" typescript stuff
+autocmd Filetype typescript set tabstop=4 shiftwidth=4 expandtab
 
 " .yaml stuff
 autocmd Filetype yaml set tabstop=2 shiftwidth=2 expandtab
