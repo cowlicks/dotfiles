@@ -156,6 +156,8 @@ nnoremap <leader>q :bp<bar>sp<bar>bn<bar>bd<CR>
 
 " ,w to save
 map ,w :w <cr>
+" ,b to close buffer
+map ,b :bd <cr>
 
 " show line numbers
 set nu
