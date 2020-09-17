@@ -173,6 +173,9 @@ colorscheme gruvbox
 " for typescript suff
 autocmd FileType typescript TsuReload
 
+autocmd Filetype typescript nnoremap ,l :TsuquyomiAsyncGeterr <cr>
+let g:tsuquyomi_disable_quickfix = 1
+
 function! SingleSpace()
     %s/\n\n/\r/g
 endfunction
