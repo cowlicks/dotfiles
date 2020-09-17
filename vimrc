@@ -83,8 +83,12 @@ if !exists(":DiffOrig")
 endif
 
 "Things below here Blake Griffith has added
-
-colorscheme desert
+"
+" show trailing whitespace
+highlight ExtraWhitespace ctermbg=red guibg=red
+" Show trailing whitespace:
+match ExtraWhitespace /\s\+$/
+autocmd ColorScheme * highlight ExtraWhitespace ctermbg=red guibg=red
 
 set backupdir=~/.vim/backups
 
