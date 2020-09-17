@@ -107,4 +107,6 @@ alias vi="nvim"
 # for gemfury cli tool
 export PATH=/home/blake/.gem/ruby/2.6.0/bin:$PATH
 
+# private scripts
+export PATH=$HOME/bin:$PATH
 source ~/.private
