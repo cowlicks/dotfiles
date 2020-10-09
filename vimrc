@@ -159,6 +159,12 @@ map ,w :w <cr>
 " ,b to close buffer
 map ,b :bd <cr>
 
+" run `!!` command in the neighboring tmux pane
+map ,p :w \|:! tmux send-keys -t 0:$(tmux display-message -p '\#I').1 C-l "\!\!" Enter Enter <cr><cr>
+
+" send Ctrl-C to neighboring tmux pane
+map ,c :w \|:! tmux send-keys -t 0:$(tmux display-message -p '\#I').1 C-c <cr><cr>
+
 " show line numbers
 set nu
 
