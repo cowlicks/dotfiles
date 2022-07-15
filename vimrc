@@ -1,3 +1,5 @@
+set encoding=utf-8
+
 " Pathogen vim package manager
 execute pathogen#infect()
 syntax on
@@ -20,7 +22,7 @@ if has("vms")
 else
   set backup		" keep a backup file
 endif
-set history=50		" keep 50 lines of command line history
+set history=500		" keep 50 lines of command line history
 set ruler		" show the cursor position all the time
 set showcmd		" display incomplete commands
 set incsearch		" do incremental searching
