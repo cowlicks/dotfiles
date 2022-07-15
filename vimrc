@@ -158,6 +158,12 @@ nnoremap <tab> :w \|:bnext <cr>
 set cursorline
 hi CursorLine ctermbg=Black cterm=None
 
+" vertical line through cursor
+set cursorcolumn
+
+" set the <leader> to ','
+let mapleader = ","
+
 " use ,n to change tabs
 nnoremap ,n :w \|:tabNext <cr>
 
@@ -167,7 +173,8 @@ nnoremap <leader>q :bp<bar>sp<bar>bn<bar>bd<CR>
 " ,w to save
 map ,w :w <cr>
 " ,b to close buffer
-map ,b :bd <cr>
+map <leader>b :BD<CR>
+
 
 " run `!!` command in the neighboring tmux pane
 map ,p :w \|:! tmux send-keys -t 0:$(tmux display-message -p '\#I').1 C-l "\!\!" Enter Enter <cr><cr>
