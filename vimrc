@@ -193,12 +193,39 @@ set history=10000
 
 colorscheme gruvbox
 
-" for typescript suff
-autocmd FileType typescript TsuReload
+call plug#begin('~/.vim/plugged')
 
-autocmd Filetype typescript nnoremap ,l :TsuquyomiAsyncGeterr <cr>
-let g:tsuquyomi_disable_quickfix = 1
+" Install development version coc.vim - the language server extension host
+" copied from https://github.com/neoclide/coc.nvim#quick-start
+Plug 'neoclide/coc.nvim', {'branch': 'master', 'do': 'yarn install --frozen-lockfile'}
+
+" Initialize plugin system
+call plug#end()
+
+" for typescript suff
+autocmd Filetype typescript nnoremap ,r :CocAction <cr>
 
 function! SingleSpace()
     %s/\n\n/\r/g
 endfunction
+
+let g:vim_vue_plugin_use_typescript	= 1
+
+" from coc.vim docs 
+" https://github.com/neoclide/coc.nvim
+
+" Use `[g` and `]g` to navigate diagnostics
+" Use `:CocDiagnostics` to get all diagnostics of current buffer in location list.
+nmap <silent> [g <Plug>(coc-diagnostic-prev)
+nmap <silent> ]g <Plug>(coc-diagnostic-next)
+
+" GoTo code navigation.
+nmap <silent> gd <Plug>(coc-definition)
+nmap <silent> gy <Plug>(coc-type-definition)
+nmap <silent> gi <Plug>(coc-implementation)
+nmap <silent> gr <Plug>(coc-references)
+
+" auto-import from autocomplete menu
+" from here: https://github.com/fannheyward/coc-pyright/issues/445
+inoremap <silent><expr> <CR> pumvisible() ? coc#_select_confirm()
+      \: "\<C-g>u\<CR>\<c-r>=coc#on_enter()\<CR>"
