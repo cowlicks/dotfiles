@@ -41,7 +41,7 @@ ZSH_THEME="robbyrussell"
 # Uncomment the following line if you want to change the command execution time
 # stamp shown in the history command output.
 # The optional three formats: "mm/dd/yyyy"|"dd.mm.yyyy"|"yyyy-mm-dd"
-# HIST_STAMPS="mm/dd/yyyy"
+HIST_STAMPS="dd.mm.yyyy"
 
 # Would you like to use another custom folder than $ZSH/custom?
 # ZSH_CUSTOM=/path/to/new-custom-folder
@@ -49,13 +49,19 @@ ZSH_THEME="robbyrussell"
 # Which plugins would you like to load? (plugins can be found in ~/.oh-my-zsh/plugins/*)
 # Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
-plugins=(git virtualenvwrapper autopep8 python tmux)
+plugins=(git autopep8 python tmux)
 
 source $ZSH/oh-my-zsh.sh
 
 # User configuration
 
 export PATH="/usr/local/bin:/usr/bin:/bin:/usr/local/games:/usr/games"
+export PATH=$PATH:~/bin
+# and cargo's binaries
+export PATH=$PATH:~/.cargo/bin
+# private scripts
+source ~/.private
+
 # export MANPATH="/usr/local/man:$MANPATH"
 
 # You may need to manually set your language environment
@@ -75,17 +81,20 @@ export PATH="/usr/local/bin:/usr/bin:/bin:/usr/local/games:/usr/games"
 # export SSH_KEY_PATH="~/.ssh/dsa_id"
 
 # For virtualenv python dev
-export WORKON_HOME=$HOME/.virtualenvs
-export PROJECT_HOME=$HOME/~/
-source /usr/bin/virtualenvwrapper.sh
+#export WORKON_HOME=$HOME/.virtualenvs
+#export PROJECT_HOME=$HOME/~/
+#source /usr/bin/virtualenvwrapper.sh
 
 # ls aliases
 alias ll='ls -alF'
 alias la='ls -A'
 alias l='ls -CF'
 
+# grep aliases
+alias grep='grep --color=auto --exclude-dir={.bzr,CVS,.git,.hg,.svn,.idea,.tox,node_modules,dist,venv,__pycache__,.bak,target} -I --exclude=.eslintcache '
+
 # anaconda install location
-export PATH=/home/blake/anaconda/bin:$PATH
+#export PATH=/home/blake/anaconda/bin:$PATH
 
 export VISUAL="vim"
 export GOPATH=$HOME/go
@@ -104,9 +113,12 @@ if [ -f "${GCLOUD_INSTALL_DIR}/completion.zsh.inc" ]; then . "${GCLOUD_INSTALL_D
 alias vim="nvim"
 alias vi="nvim"
 
-# for gemfury cli tool
-export PATH=/home/blake/.gem/ruby/2.6.0/bin:$PATH
+# use 'hrep' to search history
+alias hrep='history | grep'
 
-# private scripts
-export PATH=$HOME/bin:$PATH
-source ~/.private
+# taking notes!
+# a note is any command line thing that contains '##'
+alias notes="history 1 | grep '##'"
+
+# Set up Node Version Manager
+source /usr/share/nvm/init-nvm.sh
