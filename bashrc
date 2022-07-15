@@ -106,9 +106,9 @@ fi
 export LOCAL_DEV=true
 
 # Safe rm.
-if type "trash-put" > /dev/null; then
-    alias rm='trash-put';
-fi
+#if type "trash-put" > /dev/null; then
+#    alias rm='trash-put';
+##fi
 
 # Add global gitignore directory 
 git config --global core.excludesfile ~/.global_gitignore
