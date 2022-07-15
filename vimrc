@@ -89,8 +89,8 @@ endif
 " show trailing whitespace
 highlight ExtraWhitespace ctermbg=red guibg=red
 " Show trailing whitespace:
-match ExtraWhitespace /\s\+$/
 autocmd ColorScheme * highlight ExtraWhitespace ctermbg=red guibg=red
+match ExtraWhitespace /\s\+$/
 
 set backupdir=~/.vim/backups
 
@@ -121,6 +121,8 @@ set hlsearch
 autocmd FileType tex set colorcolumn=72
 autocmd FileType tex set tw=72
 
+" c++ stuff
+autocmd Filetype c++ nnoremap ,r :CocAction <cr>
 " python stuff
 autocmd FileType python set colorcolumn=80
 autocmd Filetype python nnoremap ,l :w \|:! clear && flake8 % <cr>
@@ -128,10 +130,16 @@ autocmd Filetype python nnoremap ,l :w \|:! clear && flake8 % <cr>
 " javascript stuff
 autocmd Filetype javascript set tabstop=2 shiftwidth=2 expandtab
 autocmd Filetype javascript set softtabstop=2
-autocmd Filetype javascript nnoremap ,l :w \|:! clear && eslint % <cr>
+autocmd Filetype javascript nnoremap ,l :w \|:! clear & \$\(npm bin\) <cr>
 
 " typescript stuff
-autocmd Filetype typescript set tabstop=4 shiftwidth=4 expandtab
+autocmd Filetype typescript set tabstop=2 shiftwidth=2 expandtab
+
+autocmd Filetype typescriptreact set tabstop=2 shiftwidth=2 expandtab
+
+" rust stuff
+autocmd Filetype rust nnoremap ,r :CocAction <cr>
+autocmd Filetype rust nnoremap ,o :CocCommand rust-analyzer.openDocs <cr>
 
 " .yaml stuff
 autocmd Filetype yaml set tabstop=2 shiftwidth=2 expandtab
