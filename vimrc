@@ -229,3 +229,10 @@ nmap <silent> gr <Plug>(coc-references)
 " from here: https://github.com/fannheyward/coc-pyright/issues/445
 inoremap <silent><expr> <CR> pumvisible() ? coc#_select_confirm()
       \: "\<C-g>u\<CR>\<c-r>=coc#on_enter()\<CR>"
+
+" rename symbol under cursor
+nmap <leader>rn <Plug>(coc-rename)
+
+" refactor current symbol
+nmap <leader>rr <Plug>(coc-rename)
+
