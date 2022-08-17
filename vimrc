@@ -122,7 +122,7 @@ autocmd FileType tex set colorcolumn=72
 autocmd FileType tex set tw=72
 
 " c++ stuff
-autocmd Filetype c++ nnoremap ,r :CocAction <cr>
+autocmd Filetype c++ nnoremap ,ra :CocAction <cr>
 " python stuff
 autocmd FileType python set colorcolumn=80
 autocmd Filetype python nnoremap ,l :w \|:! clear && flake8 % <cr>
@@ -136,9 +136,12 @@ autocmd Filetype javascript nnoremap ,l :w \|:! clear & \$\(npm bin\) <cr>
 autocmd Filetype typescript set tabstop=2 shiftwidth=2 expandtab
 
 autocmd Filetype typescriptreact set tabstop=2 shiftwidth=2 expandtab
+autocmd Filetype typescriptreact nnoremap ,ra :CocAction <cr>
+autocmd Filetype typescript nnoremap ,ra :CocAction <cr>
+
 
 " rust stuff
-autocmd Filetype rust nnoremap ,r :CocAction <cr>
+autocmd Filetype rust nnoremap ,ra :CocAction <cr>
 autocmd Filetype rust nnoremap ,o :CocCommand rust-analyzer.openDocs <cr>
 
 " .yaml stuff
@@ -201,9 +204,6 @@ Plug 'neoclide/coc.nvim', {'branch': 'master', 'do': 'yarn install --frozen-lock
 
 " Initialize plugin system
 call plug#end()
-
-" for typescript suff
-autocmd Filetype typescript nnoremap ,r :CocAction <cr>
 
 function! SingleSpace()
     %s/\n\n/\r/g
