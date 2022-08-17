@@ -122,3 +122,6 @@ alias notes="history 1 | grep '##'"
 
 # Set up Node Version Manager
 source /usr/share/nvm/init-nvm.sh
+
+# refresh sudo's timeout each time you use it
+alias sudo='sudo -v; sudo '
