@@ -238,3 +238,7 @@ nmap <leader>rn <Plug>(coc-rename)
 " refactor current symbol
 nmap <leader>rr <Plug>(coc-rename)
 
+
+" seleting file in Netrw directory listing closes the Netrw buffer
+" https://vi.stackexchange.com/a/20111/37637
+let g:netrw_fastbrowse = 0
