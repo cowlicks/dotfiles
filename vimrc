@@ -155,7 +155,9 @@ autocmd Filetype go set tabstop=4 noexpandtab
 autocmd FileType gitcommit call setpos('.', [0, 1, 1, 0])
 
 " use tab to switch buffers
-nnoremap <tab> :w \|:bnext <cr>
+nnoremap <Tab> :bnext <cr>
+" use tab to switch buffers
+nnoremap <S-Tab> :bprevious <cr>
 
 " underline cursorline
 set cursorline
