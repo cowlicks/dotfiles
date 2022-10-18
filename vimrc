@@ -143,6 +143,7 @@ autocmd Filetype typescript nnoremap ,ra :CocAction <cr>
 " rust stuff
 autocmd Filetype rust nnoremap ,ra :CocAction <cr>
 autocmd Filetype rust nnoremap ,o :CocCommand rust-analyzer.openDocs <cr>
+let g:rust_fold = 1
 
 " .yaml stuff
 autocmd Filetype yaml set tabstop=2 shiftwidth=2 expandtab
