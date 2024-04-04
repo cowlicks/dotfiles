@@ -91,7 +91,7 @@ alias la='ls -A'
 alias l='ls -CF'
 
 # grep aliases
-alias grep='grep --color=auto --exclude-dir={.bzr,CVS,.git,.hg,.svn,.idea,.tox,node_modules,dist,venv,__pycache__,.bak,target} -I --exclude=.eslintcache '
+alias grep='grep --color=auto --exclude-dir={.next,.bzr,CVS,.git,.hg,.svn,.idea,.tox,node_modules,dist,venv,__pycache__,.bak,target} -I --exclude=.eslintcache '
 
 # anaconda install location
 #export PATH=/home/blake/anaconda/bin:$PATH
