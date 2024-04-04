@@ -134,6 +134,12 @@ autocmd Filetype sql set tabstop=2 shiftwidth=2 expandtab
 autocmd Filetype javascript set tabstop=2 shiftwidth=2 expandtab
 autocmd Filetype javascript set softtabstop=2
 autocmd Filetype javascript nnoremap ,l :w \|:! clear & \$\(npm bin\) <cr>
+autocmd Filetype javascript nnoremap ,ra :CocAction <cr>
+autocmd Filetype javascriptreact set tabstop=2 shiftwidth=2 expandtab
+autocmd Filetype javascriptreact nnoremap ,ra :CocAction <cr>
+
+" js code fold not working. Trying this. Taken from: https://stackoverflow.com/a/71345892/1609380
+"let g:javaScript_fold = 1
 
 " typescript stuff
 autocmd Filetype typescript set tabstop=2 shiftwidth=2 expandtab
