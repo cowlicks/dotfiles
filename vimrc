@@ -127,6 +127,9 @@ autocmd Filetype c++ nnoremap ,ra :CocAction <cr>
 autocmd FileType python set colorcolumn=80
 autocmd Filetype python nnoremap ,l :w \|:! clear && flake8 % <cr>
 
+" sql stuff
+autocmd Filetype sql set tabstop=2 shiftwidth=2 expandtab
+
 " javascript stuff
 autocmd Filetype javascript set tabstop=2 shiftwidth=2 expandtab
 autocmd Filetype javascript set softtabstop=2
