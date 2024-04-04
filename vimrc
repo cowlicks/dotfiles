@@ -254,7 +254,11 @@ inoremap <silent><expr> <CR> pumvisible() ? coc#_select_confirm()
 nmap <leader>rn <Plug>(coc-rename)
 
 " refactor current symbol
-nmap <leader>rr <Plug>(coc-rename)
+nmap <leader>rr <Plug>(coc-refactor)
+
+nmap <leader>ac <Plug>(coc-codeaction-cursor)
+nmap <leader>al <Plug>(coc-codeaction-line)
+vmap <leader>as <Plug>(coc-codeaction-selected)
 
 
 " seleting file in Netrw directory listing closes the Netrw buffer
