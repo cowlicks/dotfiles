@@ -268,3 +268,13 @@ let g:netrw_fastbrowse = 0
 "make Ctrl-w w work as usual when in insert mode in terminal
 "much nicer on the firngers than Ctrl-\ Ctrl-n
 tnoremap <C-W><C-W> <C-\><C-n><C-W><C-W>
+
+" Spell-check Markdown
+autocmd FileType markdown setlocal spell
+" enable autocomplet for spelling
+autocmd FileType markdown setlocal complete+=kspell
+
+" Spell-check Commit Messages
+autocmd FileType gitcommit setlocal spell
+" enable autocomplet for spelling
+autocmd FileType gitcommit setlocal complete+=kspell
