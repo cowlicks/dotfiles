@@ -264,3 +264,7 @@ vmap <leader>as <Plug>(coc-codeaction-selected)
 " seleting file in Netrw directory listing closes the Netrw buffer
 " https://vi.stackexchange.com/a/20111/37637
 let g:netrw_fastbrowse = 0
+
+"make Ctrl-w w work as usual when in insert mode in terminal
+"much nicer on the firngers than Ctrl-\ Ctrl-n
+tnoremap <C-W><C-W> <C-\><C-n><C-W><C-W>
