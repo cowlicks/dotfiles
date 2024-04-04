@@ -186,7 +186,10 @@ map <leader>b :BD<CR>
 
 
 " run `!!` command in the neighboring tmux pane
-map ,p :w \|:! tmux send-keys -t 0:$(tmux display-message -p '\#I').1 C-l "\!\!" Enter Enter <cr><cr>
+map ,t :w \|:! tmux send-keys -t 0:$(tmux display-message -p '\#I').1 C-l C-u "\!\!" Enter Enter <cr><cr>
+"
+" run `!!` command in most recently opened terminal buffer
+map <leader>p :w \|:RerunLastThingInLastTerminal <cr>
 
 " send Ctrl-C to neighboring tmux pane
 map ,c :w \|:! tmux send-keys -t 0:$(tmux display-message -p '\#I').1 C-c <cr><cr>
