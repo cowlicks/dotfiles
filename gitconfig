@@ -21,6 +21,7 @@
     remoteoftruth = "!f(){ git remote | grep upstream || echo origin; }; f"
     defbranch = "!f(){ awk -F \"/\" '{print $NF}' .git/refs/remotes/origin/HEAD 2>/dev/null || echo 'master'; }; f"
 	pac = "!f(){ git add --patch \"${GIT_PREFIX}./$1\" && git commit; }; f"
+	pacn = "!f(){ git add --patch \"${GIT_PREFIX}./$1\" && git commit --no-verify; }; f"
 	sac = "!f(){ git stash push --patch \"${GIT_PREFIX}./$1\"; }; f"
 	freebase = "!f(){ git fetch $(git remoteoftruth) && git rebase $(git remoteoftruth)/$( git defbranch ); }; f"
   lb = !git reflog show --pretty=format:'%gs ~ %gd' --date=relative | grep 'checkout:' | grep -oE '[^ ]+ ~ .*' | awk -F~ '!seen[$1]++' | head -n 10 | awk -F' ~ HEAD@{' '{printf(\"  \\033[33m%s: \\033[37m %s\\033[0m\\n\", substr($2, 1, length($2)-1), $1)}'
