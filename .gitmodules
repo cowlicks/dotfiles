@@ -4,3 +4,6 @@
 [submodule "vim/bundle/vim-bufkill"]
 	path = vim/bundle/vim-bufkill
 	url = https://github.com/qpkorr/vim-bufkill
+[submodule "vim/bundle/vim-vue-plugin"]
+	path = vim/bundle/vim-vue-plugin
+	url = https://github.com/leafOfTree/vim-vue-plugin
