@@ -1,4 +1,3 @@
-vim/*
 !vim/backups/
 sasl.auth
 *.pyc
