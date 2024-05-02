@@ -125,3 +125,7 @@ source /usr/share/nvm/init-nvm.sh
 
 # refresh sudo's timeout each time you use it
 alias sudo='sudo -v; sudo '
+
+# more history please
+HISTSIZE=50000
+SAVEHIST=50000
