@@ -267,6 +267,7 @@ nmap <leader>ac <Plug>(coc-codeaction-cursor)
 nmap <leader>al <Plug>(coc-codeaction-line)
 vmap <leader>as <Plug>(coc-codeaction-selected)
 
+nnoremap <silent> <leader>h :call CocActionAsync('doHover')<cr>
 
 " seleting file in Netrw directory listing closes the Netrw buffer
 " https://vi.stackexchange.com/a/20111/37637
@@ -275,6 +276,9 @@ let g:netrw_fastbrowse = 0
 "make Ctrl-w w work as usual when in insert mode in terminal
 "much nicer on the firngers than Ctrl-\ Ctrl-n
 tnoremap <C-W><C-W> <C-\><C-n><C-W><C-W>
+"clear the scrollback in the terminal buffer
+nmap <c-w><c-l> :set scrollback=1 \| sleep 100m \| set scrollback=10000<cr> 
+tmap <c-w><c-l> <c-\><c-n><c-w><c-l>i<c-l>
 
 " Spell-check Markdown
 autocmd FileType markdown setlocal spell
