@@ -7,3 +7,6 @@
 [submodule "vim/bundle/vim-vue-plugin"]
 	path = vim/bundle/vim-vue-plugin
 	url = https://github.com/leafOfTree/vim-vue-plugin
+[submodule "vim/pack/vim-javascript/start/vim-javascript"]
+	path = vim/pack/vim-javascript/start/vim-javascript
+	url = https://github.com/pangloss/vim-javascript.git
