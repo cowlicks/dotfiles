@@ -133,6 +133,13 @@ autocmd Filetype sql set tabstop=2 shiftwidth=2 expandtab
 " javascript stuff
 autocmd Filetype javascript set tabstop=2 shiftwidth=2 expandtab
 autocmd Filetype javascript set softtabstop=2
+"autocmd Filetype javascript set foldmethod=syntax
+augroup javascript_folding
+    au!
+    au FileType javascript setlocal foldmethod=syntax
+    au Filetype javascript setlocal foldlevelstart=0
+    au Filetype javascript setlocal nofoldenable
+augroup END
 autocmd Filetype javascript nnoremap ,l :w \|:! clear & \$\(npm bin\) <cr>
 autocmd Filetype javascript nnoremap ,ra :CocAction <cr>
 autocmd Filetype javascriptreact set tabstop=2 shiftwidth=2 expandtab
