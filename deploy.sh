@@ -5,7 +5,7 @@ set -e
 
 dot_dir="$( cd "$( dirname "${BASH_SOURCE[0]}" )" && pwd )"
 olddir=~/.dotfiles_old
-files="bashrc tmux.conf vim vimrc global_gitignore gitconfig zshrc"
+files="bashrc tmux.conf vim vimrc global_gitignore gitconfig zshrc emacs.d"
 
 # mv existing dotfiles to old_dotfiles
 echo "Creating $olddir for backup of any existing dotfiles in ~"
