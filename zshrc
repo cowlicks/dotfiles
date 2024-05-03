@@ -129,3 +129,4 @@ alias sudo='sudo -v; sudo '
 # more history please
 HISTSIZE=50000
 SAVEHIST=50000
+export PATH="/opt/homebrew/bin:$PATH"
