@@ -233,9 +233,12 @@ colorscheme gruvbox
 
 call plug#begin('~/.vim/plugged')
 
+" when node is installed viw nvm we need this variable for coc to find it:
+let g:coc_node_path = '~/.nvm/versions/node/v22.1.0/bin/node'
 " Install development version coc.vim - the language server extension host
 " copied from https://github.com/neoclide/coc.nvim#quick-start
 Plug 'neoclide/coc.nvim', {'branch': 'master', 'do': 'yarn install --frozen-lockfile'}
+
 
 " Initialize plugin system
 call plug#end()
