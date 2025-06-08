@@ -33,3 +33,5 @@
 	required = true
 [interactive]
 	singlekey = true
+[rerere]
+	enabled = true
