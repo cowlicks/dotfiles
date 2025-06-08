@@ -1,6 +1,7 @@
 [user]
     name = Blake Griffith
     email = blake.a.griffith@gmail.com
+	signingkey = /home/blake/.ssh/id_ed25519.pub
 
 [color]
     diff = auto
@@ -35,3 +36,5 @@
 	singlekey = true
 [rerere]
 	enabled = true
+[gpg]
+	format = ssh
