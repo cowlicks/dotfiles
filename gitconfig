@@ -9,7 +9,7 @@
     ui = auto
 
 [core]
-    editor = vim
+    editor = nvim
 	excludesfile = /home/blake/.global_gitignore
 	hooksPath = /home/blake/git/dotfiles/git_hooks
 
