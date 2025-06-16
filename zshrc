@@ -130,3 +130,7 @@ alias sudo='sudo -v; sudo '
 HISTSIZE=50000
 SAVEHIST=50000
 export PATH="/opt/homebrew/bin:$PATH"
+
+. "$HOME/.atuin/bin/env"
+
+eval "$(atuin init zsh --disable-up-arrow)"
