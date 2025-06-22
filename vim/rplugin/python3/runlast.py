@@ -25,7 +25,6 @@ But I wanted to be able to do this with a vim terminal buffer because it can tak
 Thank you whoever asked this question:
 https://vi.stackexchange.com/questions/21449/send-keys-to-a-terminal-buffer
 https://www.reddit.com/r/neovim/comments/qjkx12/send_upcr_to_term_buffer_using_chansend_to_run/
-'''
 import pynvim
 
 rerun_command_name = 'RerunLastThingInLastTerminal'
@@ -52,3 +51,4 @@ class Rerunner(object):
     @pynvim.command(cancel_command_name)
     def cancel_in_last_terminal(self):
             self.nvim.command_output(f'call chansend(g:last_terminal_chan_id, {string_to_cancel})')
+'''

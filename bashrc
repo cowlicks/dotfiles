@@ -123,3 +123,8 @@ git config --global core.excludesfile ~/.global_gitignore
 # Newer version have a download cache. Flippin sweet.
 export PIP_DOWNLOAD_CACHE=$HOME/.pip_download_cache
 . "$HOME/.cargo/env"
+
+. "$HOME/.atuin/bin/env"
+
+[[ -f ~/.bash-preexec.sh ]] && source ~/.bash-preexec.sh
+eval "$(atuin init bash)"

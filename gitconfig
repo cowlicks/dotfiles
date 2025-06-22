@@ -40,3 +40,6 @@
 	format = ssh
 [commit]
 	gpgsign = true
+
+[includeIf  "gitdir:~/git/macro/"]
+    path = ~/git/macro/.gitconfig

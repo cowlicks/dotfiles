@@ -1,3 +1,4 @@
 !vim/backups/
 sasl.auth
 *.pyc
+vim/undodir_nixvim/

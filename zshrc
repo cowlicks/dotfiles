@@ -91,7 +91,7 @@ alias la='ls -A'
 alias l='ls -CF'
 
 # grep aliases
-alias grep='grep --color=auto --exclude-dir={.next,.bzr,CVS,.git,.hg,.svn,.idea,.tox,node_modules,dist,venv,__pycache__,.bak,target} -I --exclude=.eslintcache '
+alias grep='grep --line-number --color=auto --exclude-dir={.next,.bzr,CVS,.git,.hg,.svn,.idea,.tox,node_modules,dist,venv,__pycache__,.bak,target} -I --exclude=.eslintcache '
 
 # anaconda install location
 #export PATH=/home/blake/anaconda/bin:$PATH
@@ -110,11 +110,12 @@ if [ -f "${GCLOUD_INSTALL_DIR}/path.zsh.inc" ]; then . "${GCLOUD_INSTALL_DIR}/pa
 # The next line enables shell command completion for gcloud.
 if [ -f "${GCLOUD_INSTALL_DIR}/completion.zsh.inc" ]; then . "${GCLOUD_INSTALL_DIR}/completion.zsh.inc"; fi
 
-alias vim="nvim"
-alias vi="nvim"
+alias vim="~/nixvim/result/bin/nvim"
+alias vi="~/nixvim/result/bin/nvim"
+
 
 # use 'hrep' to search history
-alias hrep='history | grep'
+alias hrep='history | /usr/bin/grep --color=auto'
 
 # taking notes!
 # a note is any command line thing that contains '##'
@@ -130,6 +131,15 @@ alias sudo='sudo -v; sudo '
 HISTSIZE=50000
 SAVEHIST=50000
 export PATH="/opt/homebrew/bin:$PATH"
+
+export PATH="/home/blake/.npm-global/bin:$PATH"
+
+# bun completions
+[ -s "/home/blake/.bun/_bun" ] && source "/home/blake/.bun/_bun"
+
+# bun
+export BUN_INSTALL="$HOME/.bun"
+export PATH="$BUN_INSTALL/bin:$PATH"
 
 . "$HOME/.atuin/bin/env"
 
